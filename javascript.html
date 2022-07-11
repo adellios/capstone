@@ -1,0 +1,21 @@
+<script>
+	
+  google.script.run.withSuccessHandler(showData).getData();
+
+  //generates the data table from the data array
+  function showData(dataArray){
+    $(document).ready(function(){
+      $('#data-table').DataTable({
+        data: dataArray,
+        columns: [
+          {"title":"LAST"},
+          {"title":"FIRST"},
+          {"title":"SCHOOL/DEPT"},
+          {"title":"RESEARCH COURSES TAUGHT"},
+          {"title":"RESEARCH METHODS EXPERTISE"},
+          {"title":"RESEARCH INTERESTS"}
+        ]
+      });
+    });
+  }
+</script>
